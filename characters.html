@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เลือกตัวละคร — Sipwi</title>
+  <meta name="description" content="เลือกตัวละครที่ตรงกับคุณ แล้วแชร์ให้เพื่อน ๆ">
+  <meta name="theme-color" content="#0f0b1e">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="เลือกตัวละคร — Sipwi">
+  <meta property="og:description" content="เลือกตัวละครที่ตรงกับคุณ แล้วแชร์ให้เพื่อน ๆ">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topbar container">
+    <a class="back" href="../index.html" aria-label="กลับหน้าหลัก">← หน้าหลัก</a>
+    <span class="logo logo-sm">Sipwi</span>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">เลือกตัวละครของคุณ</h1>
+    <p class="muted">แตะการ์ดเพื่อเลือก แล้วกดแชร์ให้เพื่อนได้เลย</p>
+
+    <!-- การ์ดตัวละคร (เติมโดย characters.js) -->
+    <div id="characterGrid" class="grid" role="radiogroup" aria-label="รายชื่อตัวละคร"></div>
+
+    <!-- ผลลัพธ์หลังเลือก -->
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="result__emoji" id="resultEmoji"></div>
+      <h2 class="result__name" id="resultName"></h2>
+      <p class="result__tagline" id="resultTagline"></p>
+      <ul class="chips" id="resultTraits"></ul>
+
+      <h3 class="share__title">แชร์ผลลัพธ์ของคุณ</h3>
+      <div class="share__row">
+        <button class="btn btn-share" type="button" data-share="native">📲 แชร์</button>
+        <button class="btn btn-share btn-line" type="button" data-share="line">LINE</button>
+        <button class="btn btn-share btn-fb" type="button" data-share="facebook">Facebook</button>
+        <button class="btn btn-share btn-x" type="button" data-share="x">X</button>
+        <button class="btn btn-share" type="button" data-share="copy">🔗 คัดลอกลิงก์</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Sipwi</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/characters.js"></script>
+</body>
+</html>
